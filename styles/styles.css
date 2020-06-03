@@ -14,12 +14,18 @@ header {
     display: flex;
     flex-direction: column;
     height:100vh;
+    position: relative;
 }
 
 #navbar {
     flex: 0 0 auto;
     /**added****/
     background: #000000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
 }
 
 #top-nav {
@@ -284,3 +290,83 @@ nav ul li a:hover {
     animation-iteration-count: infinite;
 }
 
+/**************about section************/
+.section-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    display: inline-block;
+    border-right: 3px solid #000000;
+    margin: 0px 0px 20px 30px;
+    padding-right: 10px;
+    letter-spacing: 0.2rem;
+}
+
+#about {
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+#store-img {
+    width: 100%;
+}
+
+#store-img img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    min-width: 300px;
+}
+
+.about-text {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.about-header {
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.about-description {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    display: inline-block;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.button-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.contact-btn:hover {
+color: #000000;
+}
+
+
+@media screen and (min-width: 776px) {
+    .about-center {
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #store-img {
+        flex: 0 0 calc(40% - 10px);
+    }
+
+    .about-text {
+        flex: 0 0 calc(60% - 10px);
+    }
+    
+}
